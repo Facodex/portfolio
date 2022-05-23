@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width">
+    <!-- icono de mi web  -->
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <title>Facundo Benitez</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- fuente header -->
+    <!-- JQUERY  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- styles  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/apariciones.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
-    <!-- fuente body -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- fuente montserrat algunos titulos  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- slider  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="functions/slider.js"></script>
+    <!-- scripts -->
+    <script src="functions/contacto.js"></script>
   </head>
   <body>
     <!-- header que contiene menu de arriba titulos e iconos -->
@@ -21,59 +37,57 @@
       <!-- menu de arriba -->
       <nav class="menu1">
         <ul>
-          <li><a href="#">Hoja de vida</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="#">Habilidades</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="Facundo-Benitez-CV.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida - CV</a></li>
+          <li><a href="#proyecto">Proyectos</a></li>
+          <li><a href="#saludo">Habilidades</a></li>
+          <li><a href="#" id="linkContacto">Contacto</a></li>
         </ul>
       </nav>
+      <aside id="contacto">
+        <ul>
+          <li><i class='bx bxl-instagram-alt bx-md'></i><a href="https://www.instagram.com/facundo_benitez98/" target="_blank">facundo_benitez98</a></li>
+          <li><i class='bx bxl-linkedin bx-md'></i><a href="https://www.linkedin.com/in/facundo-benitez-facodex/" target="_blank">Facundo Benitez</a></li>
+          <li><i class='bx bx-mail-send bx-md'></i>  facu.cr9@gmail.com</li>
+        </ul>
+      </aside>
       <!-- titulos e iconos -->
-      <h1>Facundo Benitez</h1>
-      <h2>Desarrollador Web</h2>
+      <h1 id="tituloPrincipal"></h1>
+      <h2 id="subtituloPrincipal">Desarrollador Web</h2>
       <div>
         <ul class="iconos">
-          <li><i class='bx bx-code bx-lg' ></i></li>
-          <li><i class='bx bxl-css3 bx-lg' ></i></li>
-          <li><i class='bx bxl-javascript bx-lg' ></i></li>
-          <li><i class='bx bxl-git bx-lg'></i></li>
-          <li><i class='bx bx-code-alt bx-lg' ></i></li>
+          <li><i class='bx bx-code bx-lg'></i></li>
+          <li><i class='bx bxl-html5 bx-lg'></i></li>
+          <li><i class='bx bxl-css3 bx-lg'></i></li>
+          <li><i class='bx bxl-javascript bx-lg'></i></li>
+          <li><i class='bx bx-code-alt bx-lg'></i></li>
         </ul>
       </div>
     </header>
-    <!-- manu hamburguesa -->
-    <!-- <section class="navegador">
-      <i id="hamburguesa" class='bx bx-menu-alt-left bx-lg'></i>
-      <ul class="listahamburguesa">
-        <li><a href="#">Hoja de vida</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Habilidades</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </section> -->
+
     <!-- saludo de presentacion -->
-    <section class="saludo">
+    <section class="saludo aparicion" id="saludo">
       <h1>Bienvenido a mi portfolio!</h1>
       <p>
-        Soy un programador autodidacta que espera poder seguir aprendiendo mucho más y convertirse en un FullStack. 
-        Actualmente me estoy formando en react que es donde quiero llegar a los niveles mas avanzados.
+        Soy un programador autodidacta y espero poder seguir aprendiendo mucho más de programación y convertirme en un Full Stack.
+        Actualmente me estoy formando en react que es donde me quiero centrar y adquirir todos los conocimientos que mas pueda 😁
       </p>
     </section>
-    <hr>
+    <hr class="aparicion">
     <!-- SECCION DE HABILIDADES  -->
     <section class="skills">
       <div class="skills__cont">
         <!-- <h1 id="tituloSk">SKILLS</h1> -->
-        <img src="svg/webdev.svg">
-        <ul class="skills__ul">
+        <img src="imagenes/cv1.jpg" class="aparicion">
+        <ul class="skills__ul aparicion">
           <h1>Mis Skills...</h1>
           <li>Html5</li>
           <li>Css</li>
           <li>JavaScript</li>
           <li>TypeScript</li>
-          <li>Github</li>
+          <li>GitHub</li>
         </ul>
-        <ul class="skills__ul">
-          <h1>Mas recursos...</h1>
+        <ul class="skills__ul aparicion">
+          <h1>Más recursos...</h1>
           <li>NodeJS</li>
           <li>MongoDB</li>
           <li>JQuery</li>
@@ -82,41 +96,94 @@
         </ul>
       </div>
     </section>
-    <!-- proyecto numero 1 -->
-    <section class="proyecto proyecto1">
-      <div>
-        <h1>Blog de Noticias con interacción del usuario</h1>
-        <img src="imgs/blog.png">
-        <p>Este blog cuenta con 5 secciones para interactuar por medio de sus botones, ofreciendo contenidos en forma de post con titulos, imagenes y parrafos. Tambien cuenta con secciones desplegables y ocultables al dar click.</p>
+
+    <!-- icono de scroll  -->
+    <i class='bx bx-up-arrow-alt scrollUp aparicion bx-lg'></i>
+
+    <!-- SECCION DE PROYECTOS  -->
+    <section class="proyectoGlobal">
+      <div id="presentacionProyectos">
+        <h1 id="tituloProyectos">
+          Mis proyectos
+        </h1>
+        <a href="https://github.com/Facodex?tab=repositories" target="_blank">
+          <i class='bx bx-right-down-arrow-circle bx-md'></i>Aquí los encontrarás en GitHub <i class='bx bxl-github bx-md'></i>
+        </a>
+      </div>
+            
+      <div class="bxslider">
+        <!-- primera seccion -->
+        <div class="proyecto" id="proyecto">
+          <section>
+            <h2>Proyecto-Angular / Portafolio de proyectos con base de datos incluida</h2>
+            <h3>Tecnologias: HTML - CSS - JavaScript - TypeScript - Angular - MongoDB - NodeJS</h3>
+            <p>Este trabajo lo construí en el modulo final de mi curso Master en JavaScript, para llevarlo a cabo utilizamos
+             mucho la terminal de comandos para bajar todas las librerias y dependencias que fuimos necesitando. Cabe destacar que tanto lo que se visualiza, se guarda, 
+             se edita o se elimina, esta siendo captado por la base de datos. </p>
+            <video controls>
+              <source src="videos/proyecto-angular.mp4" type="video/mp4">
+            </video>
+          </section>
+        </div>
+        <!-- segunda seccion  -->
+        <div class="proyecto">
+          <section>
+            <h2>Buenbit / Replica de diseño de plataforma de criptomonedas</h2>
+            <h3>Tecnologias: HTML - CSS - JavaScript </h3>
+            <p>Este diseño lo construí con la iniciativa del sitio oficial de BuenBit, su diseño me gusto muhco y fue por eso que lo quise replicar.</p>
+
+            <video controls>
+              <source src="videos/imitacion-buenbit.mp4" type="video/mp4">
+            </video>
+          </section>
+        </div>
+        <!-- tercera seccion  -->
+        <div class="proyecto">
+          <section>
+            <h2>Proyecto-Blog</h2>
+            <h3>Tecnologias: HTML - CSS - JavaScript - JQuery</h3>
+            <p>Este sitio es muy interesante, tiene muy buenas funcionalidades como inicios y cierres de sesion, formularios, 3 paletas de temas diferentes, un reloj en tiempo real, entre otras cosas.</p>
+            <video controls>
+              <source src="videos/proyecto-blog.mp4" type="video/mp4">
+            </video>
+          </section>
+        </div>   
+        <!-- cuarta seccion  -->
+        <div class="proyecto">
+          <section>
+            <h2>Entretencion Web</h2>
+            <h3>Tecnologias: HTML - CSS - JQuery - JavaScript</h3>
+            <p>Te presento una web que inicio con funcionalidades logicas para practicar y se convirtio en un sitio entretenido donde se pudieron armar dos pequeños juegos 
+              de logica con transiciones muy agradables y una tematica muy divertida.</p>
+            <video controls>
+              <source src="videos/proyecto-entretencionweb.mp4" type="video/mp4">
+            </video>
+          </section>
+        </div>
+        <!-- quinta seccion  -->
+        <div class="proyecto">
+          <section>
+            <h2>Portada-animada</h2>
+            <h3>Tecnologias: HTML - CSS</h3>
+            <p>He diseñado esta portada con la finalidad de mejorar mis estilos de diseño, aumentar mi creatividad, y adquirir mayores conocimientos esteticos.</p>
+            <video controls>
+              <source src="videos/burbujas.mp4" type="video/mp4">
+            </video>
+          </section>
+        </div>
       </div>
     </section>
-    <br> <br> <br>
-    <!-- proyecto numero 2 -->
-    <section class="proyecto proyecto2">
-      <div>
-        <h1>Diseño de plataforma web de finanzas</h1>
-        <img src="imgs/exchange.png">
-        <p>Este diseño lo hice inspirandome en las plataformas de cambios de criptomonedas que son tendencias en este momento.</p>
-      </div>
-    </section>
-    <br><br><br>
-    <!-- proyecto numero 3 -->
-    <section class="proyecto proyecto3">
-      <div>
-        <h1>Galeria de fotos</h1>
-        <img src="imgs/galeria.png">
-        <p>Siempre tendremos muy en cuenta las fotos para nuestra web, es por eso que cree esta galeria con unos ordenes y transiciones muy peculiares!!</p>
-      </div>
-    </section>
+  
     <!-- footer section  -->
-    <footer>
+    <footer id="piePagina">
       <h2>Puedes contactarme por</h2>
       <ul>
-        <li><i class='bx bxl-instagram-alt bx-md'></i> facundo_benitez98</li>
-        <li><i class='bx bxl-linkedin bx-md'></i></i> Facundo Benitez</li>
+        <li><i class='bx bxl-instagram-alt bx-md'></i><a href="https://www.instagram.com/facundo_benitez98/" target="_blank">facundo_benitez98</a></li>
+        <li><i class='bx bxl-linkedin bx-md'></i></i><a href="https://www.linkedin.com/in/facundo-benitez-facodex/" target="_blank">Facundo Benitez</a></li>
         <li><i class='bx bx-mail-send bx-md'></i> facu.cr9@gmail.com</li>
       </ul>
     </footer>
-    <script src="functions.js" charset="utf-8"></script>
+    <script src="functions/titulo.js" charset="utf-8"></script>
+    <script src="functions/apariciones.js"></script>
   </body>
 </html>

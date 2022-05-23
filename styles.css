@@ -1,16 +1,19 @@
-html{
-  font-family: 'Roboto', sans-serif;
-}
+/* *{
+ margin: 0; 
+ padding: 0;
+ box-sizing: border-box;
+} */
 body{
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
   background-color: #0E0D0D ;
   background-blend-mode: multiply;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 /* header styles */
 header{
-  background-image: url("imgs/portada.jpg");
+  background-image: url("../imagenes/prueba1.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -20,31 +23,18 @@ header{
   justify-content: center;
   padding-top: 0.5rem;
   color: white;
-  font-family: 'Kalam', sans-serif;
   line-height: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
-
-header ul{
+/* styles menu 1*/
+.menu1 ul{
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
-header h2{
-  font-size: 35px;
-  text-align: center;
-}
 
-/* styles nav */
 .menu1{
   padding-top: 0.5rem;
-  height: 100px;
-}
-/* iconos style  */
-.iconos{
-  margin-top: 70px;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
 }
 
 nav a{
@@ -53,8 +43,7 @@ nav a{
   font-size: 1.5rem;
 }
 nav a:hover{
-  color: #CD5C5C;
-  text-decoration: underline;
+  color: #6f1566;
   line-height: 4px;
   transition: 0.7s;
 }
@@ -62,121 +51,76 @@ nav a:hover{
 hr{
   width: 800px;
 }
-/* TITULO  */
-header h1{
+/* CONTACTO DESLIZABLE  */
+#contacto{
+  display: block;
+  opacity: 0;
+  width: 300px;
+  float: right;
+  transition: all 0.7s;
+}
+#contacto ul{
+  list-style: none;
+}
+#contacto li{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+#contacto a{
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+#contacto a:hover{
+  color: #6f1566;
+  line-height: 4px;
+  transition: 0.7s;
+}
+/* TITULO Y SUBTITULO  */
+#tituloPrincipal{
   margin-top: 200px;
-  font-size: 4rem;
+  font-size: 80px;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-/* menu hamburguesa fijo izquierda */
-.navegador{
-  width: 800px;
+#subtituloPrincipal{
+  font-size: 55px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  color: white;
+  opacity: 0;
 }
-.navegador i:hover{
-  color: #CD5C5C;
-  transition: 0.6s;
-}
-.listahamburguesa{
-  display: none;
+/* iconos de la portada style  */
+.iconos{
+  margin-top: 70px;
+  display: flex;
   justify-content: space-around;
   list-style: none;
-}
-.listahamburguesa a{
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
-}
-.listahamburguesa a:hover{
-  color: #CD5C5C;
-  text-decoration: underline;
-  transition: 0.7s;
+  opacity: 0;
 }
 
 /* saludo y presentacion */
 .saludo{
-  width: 800px;
+  width: 90%;
   margin: 0 auto;
 }
 .saludo h1{
   color: white;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
-  font-family: 'Kalam', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .saludo p{
   text-align: center;
   color: white;
-  line-height: 40px;
-  font-size: 25px;
+  font-size: 20px;
   justify-content: center;
-}
-/* section class proyectos */
-.proyecto1 {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  justify-content: center;
-  padding-top: 0.5rem;
-  color: white;
-  font-family: 'Kalam', sans-serif;
-  line-height: 20px;
-}
-.proyecto2 {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  justify-content: center;
-  padding-top: 0.5rem;
-  color: white;
-  font-family: 'Kalam', sans-serif;
-  line-height: 20px;
-}
-.proyecto3 {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  justify-content: center;
-  padding-top: 0.5rem;
-  color: white;
-  font-family: 'Kalam', sans-serif;
-  line-height: 20px;
-}
-.proyecto h1{
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 2px 2px;
-  font-size: 40px;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
 }
 
-.proyecto img{
-  width: 800px;
-  height: 400px;
-  margin: 0 auto;
-  display: flex;
-  background-size: cover;
-  justify-content: center;
-  padding-bottom: 1em;
-}
-.proyecto p{
-  width: 80%;
-  margin: 0 auto;
-  font-size: 20px;
-}
 /* section class skills */
 .skills{
   width: 90%;
@@ -192,14 +136,15 @@ header h1{
   justify-content: space-between;
 }
 .skills__cont h1{
-  font-family: 'Kalam', sans-serif;
   font-size: 30px;
   color: 	white	;
-  text-shadow: 1px 1px 2px;
+  font-family: 'Montserrat', sans-serif;
 }
 .skills__cont img{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
   margin: 0 auto;
 }
 .skills__ul {
@@ -211,20 +156,81 @@ header h1{
   color: #fff;
   margin-top: 10px;
 }
-/* section post de rellenos por mientras*/
-.post{
-  width: 70%;
-  margin: 0 auto;
+
+
+/* SECTION CLASS PROYECTOS */
+
+/* presentacion de proyectos titulo y link a gitHub  */
+#tituloProyectos{
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
 }
+#presentacionProyectos a{
+  color: #fff;
+  margin-left: 38%;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 999px;
+  transition: all 0.3s;
+}
+
+#presentacionProyectos a:hover{
+  background-color: #6f1566;
+  transition: all 0.3s;
+}
+
+/* styles de los divs padres  */
+.proyectoGlobal{
+  background-image: url("../imagenes/prueba7.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 25px 25px 50px 25px;
+}
+.proyecto{
+  display: flex;
+  width: 90%;
+  margin: 0 auto !important;
+  color: white;
+}
+.proyecto section{
+  width: 80%;
+  margin: 0 auto !important;
+}
+
+.proyecto h2{
+  text-decoration: underline;
+}
+.proyecto video{
+  width: 90%;
+  height: 400px;
+  margin: 0 auto !important;
+  background-size: cover;
+  object-fit: cover;
+}
+
+
 /* footer style */
 footer{
   height: 100px;
   color: white;
-  font-family: 'Kalam', sans-serif;
   line-height: 20px;
   display: block;
   justify-content: center;
   align-items: center;
+  margin-top: 40px; 
+  margin-bottom: 30px;
 }
 footer h2{
   display: flex;
@@ -237,8 +243,20 @@ footer ul{
   align-items: center;
   margin-bottom: 40px;
 }
-
 footer ul li{
   font-size: 20px;
   margin-right: 30px;
 }
+footer a{
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+footer a:hover{
+  color: #6f1566;
+  line-height: 4px;
+  transition: 0.7s;
+}
+
+

@@ -1,0 +1,24 @@
+/* portafolio responsive */
+@media screen and (max-width:480px) {
+    header{
+        width:88vh;
+        height: 500px;
+        background-image: url("../imagenes/prueba2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        justify-content: center;
+    }
+    #tituloPrincipal{
+        font-size: 55px;
+        margin-top: 50px;
+    }
+    #subtituloPrincipal{
+        font-size: 30px;
+    }
+
+    .saludo{
+        width: 80vh;
+    }
+}
